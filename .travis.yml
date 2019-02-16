@@ -1,8 +1,3 @@
 language: java
-sudo: false # faster builds
-gem 'coveralls', require: false 
-script: "mvn cobertura:cobertura"
-require 'coveralls'
-Coveralls.wear!
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+sudo: false
+script: mvn clean verify
